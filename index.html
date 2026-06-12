@@ -3,7 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>professional_cv</title>
+<title>Francesco Idato — CV</title>
+<meta name="description" content="CV of Francesco Idato — IT technician apprentice and Computer Engineering student (AI curriculum) building with Vue 3, TypeScript and local-first AI tooling.">
+<meta property="og:title" content="Francesco Idato — CV">
+<meta property="og:description" content="IT technician apprentice and Computer Engineering student (AI curriculum) building with Vue 3, TypeScript and local-first AI tooling.">
+<meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f0e9de">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d97757'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='32' font-weight='bold' text-anchor='middle' fill='%23fffdf8'%3EFI%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Francesco Idato",
+  "jobTitle": "IT Technician Apprentice",
+  "url": "https://github.com/devfrx",
+  "sameAs": ["https://github.com/devfrx"],
+  "address": {"@type": "PostalAddress", "addressLocality": "Termoli", "addressRegion": "Molise", "addressCountry": "IT"}
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
@@ -93,27 +111,37 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
 </style>
 </head>
 <body>
+<script>
+(function(){
+  try{
+    var s = localStorage.getItem('cv-dark');
+    var dark = s !== null ? s === '1' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark) document.body.classList.add('dark');
+  }catch(e){}
+})();
+</script>
 <div class="controls">
   <div class="dark-toggle">
-    <button id="btn-light" class="active" onclick="setDark(false)">&#9788;</button>
-    <button id="btn-dark" onclick="setDark(true)">&#9790;</button>
+    <button id="btn-light" class="active" onclick="setDark(false, true)">&#9788;</button>
+    <button id="btn-dark" onclick="setDark(true, true)">&#9790;</button>
   </div>
   <div class="lang-toggle">
-    <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
-    <button id="btn-it" onclick="setLang('it')">IT</button>
+    <button id="btn-en" class="active" onclick="setLang('en', true)">EN</button>
+    <button id="btn-it" onclick="setLang('it', true)">IT</button>
+  </div>
+  <div class="dark-toggle">
+    <button id="btn-pdf" onclick="window.print()" title="Download PDF">PDF</button>
   </div>
 </div>
 <div class="cv">
   <div class="header">
     <div>
       <div class="name">Francesco Idato</div>
-      <div class="title-tag">Studying Backend/Frontend Developer &nbsp;·&nbsp; AI Enthusiast</div>
+      <div class="title-tag" data-t="title-tag">IT Technician Apprentice &nbsp;·&nbsp; Backend/Frontend Developer &nbsp;·&nbsp; AI Enthusiast</div>
     </div>
     <div class="contact-block">
       Termoli, Molise, Italy<br>
-      <a href="https://github.com/devfrx">github.com/devfrx</a><br>
-      <!-- linkedin coming soon --><br>
-      <a href="#">portfolio</a> <span style="font-size:11px;color:#aaa;">coming soon</span>
+      <a href="https://github.com/devfrx" target="_blank" rel="noopener noreferrer">github.com/devfrx</a>
     </div>
   </div>
 
@@ -122,7 +150,7 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
 
       <div class="section">
         <div class="sec-title" data-t="sec-profile">Profile</div>
-        <p class="profile-text" data-t="profile-text">I'm a Computer Engineering student and working developer with a genuine interest in software and AI. I spend most of my time between university, my job as an IT apprentice, and personal projects, mostly building tools I actually want to use. I like understanding how things work under the hood and tend to go deep on whatever I'm currently learning, whether that's a new framework, a local LLM setup, or something else entirely.</p>
+        <p class="profile-text" data-t="profile-text">I am studying Computer Engineering with a specialization in Artificial Intelligence and currently working as an apprentice developer. My main interests revolve around software development and the integration of AI models into applications, alongside a strong curiosity for network architecture and infrastructure. I split my time between university, work, and personal projects, which I pursue both to build practical tools and to continuously deepen my technical skills. I take a detail-oriented approach focused on deep understanding: when I encounter a new language, framework, model, or logical problem, I tend to analyse it thoroughly, looking for the most efficient, scalable, and professional solution within my current abilities (and beyond, whenever it turns into an opportunity to learn something new).</p>
       </div>
 
       <div class="section">
@@ -196,7 +224,7 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
 
         <div class="entry">
           <div class="entry-head">
-            <div class="entry-title"><a href="https://github.com/devfrx/alice" class="title-link" target="_blank">AL\CE</a></div>
+            <div class="entry-title"><a href="https://github.com/devfrx/alice" class="title-link" target="_blank" rel="noopener noreferrer">AL\CE</a></div>
             <div class="entry-date" data-t="alice-date">2025 → Present</div>
           </div>
           <div class="entry-sub" data-t="alice-sub">Modular personal AI assistant, 100% local, no cloud dependencies</div>
@@ -212,7 +240,7 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
 
         <div class="entry">
           <div class="entry-head">
-            <div class="entry-title"><a href="https://github.com/devfrx/modex" class="title-link" target="_blank">ModEx</a></div>
+            <div class="entry-title"><a href="https://github.com/devfrx/modex" class="title-link" target="_blank" rel="noopener noreferrer">ModEx</a></div>
             <div class="entry-date" data-t="modex-date">2025 → Present</div>
           </div>
           <div class="entry-sub" data-t="modex-sub">Metadata-only mod library manager for Minecraft, 16 public releases on GitHub</div>
@@ -229,7 +257,7 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
 
         <div class="entry">
           <div class="entry-head">
-            <div class="entry-title"><a href="https://github.com/devfrx/finanx" class="title-link" target="_blank">Finanx</a></div>
+            <div class="entry-title"><a href="https://github.com/devfrx/finanx" class="title-link" target="_blank" rel="noopener noreferrer">Finanx</a></div>
             <div class="entry-date" data-t="finanx-date">2026 → Present</div>
           </div>
           <div class="entry-sub" data-t="finanx-sub">Business tycoon simulation desktop application built with Electron + Vue 3</div>
@@ -290,8 +318,8 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
         <div class="skill-group">
           <div class="skill-group-label" data-t="label-tools">Tools &amp; Platforms</div>
           <div class="tags">
-            <span class="tag hi">Git / GitHub</span><span class="tag hi">NPM</span>
-            <span class="tag">Docker</span><span class="tag">VS Code</span><span class="tag">GitHub Copilot</span>
+            <span class="tag hi">Git / GitHub</span><span class="tag hi">NPM</span><span class="tag hi">VS Code</span>
+            <span class="tag">Docker</span><span class="tag">GitHub Copilot</span>
             <span class="tag">WinSCP</span><span class="tag">Electron</span><span class="tag">VirtualBox</span>
             <span class="tag">DBeaver</span><span class="tag">phpMyAdmin</span><span class="tag">Android Studio</span><span class="tag">DEV C++</span><span class="tag">Odoo CRM</span>
           </div>
@@ -331,64 +359,11 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
   </div>
 </div>
 <script>
+/* EN content lives in the static markup and is captured at load time; only IT is hand-written. */
 const T = {
-  en: {
-    'title-tag': 'IT Technician Apprentice &nbsp;&middot;&nbsp; Backend/Frontend Developer &nbsp;&middot;&nbsp; AI Enthusiast',
-    'coming-soon': 'coming soon',
-    'sec-profile': 'Profile',
-    'sec-experience': 'Professional Experience',
-    'sec-education': 'Education',
-    'sec-projects': 'Personal Projects',
-    'sec-stack': 'Core Stack',
-    'sec-languages': 'Languages',
-    'sec-certifications': 'Certifications',
-    'sec-softskills': 'Soft Skills',
-    'label-frontend': 'Frontend',
-    'label-backend': 'Backend &amp; Architecture',
-    'label-ai': 'AI &amp; ML',
-    'label-langs': 'Languages',
-    'label-tools': 'Tools &amp; Platforms',
-    'label-other': 'Other',
-    'profile-text': 'I am studying Computer Engineering with a specialization in Artificial Intelligence and currently working as an apprentice developer. My main interests revolve around software development and the integration of AI models into applications, alongside a strong curiosity for network architecture and infrastructure. I split my time between university, work, and personal projects, which I pursue both to build practical tools and to continuously deepen my technical skills. I take a detail-oriented approach focused on deep understanding: when I encounter a new language, framework, model, or logical problem, I tend to analyse it thoroughly, looking for the most efficient, scalable, and professional solution within my current abilities (and beyond, whenever it turns into an opportunity to learn something new).',
-    'eco-title': 'IT Technician Apprentice at EcocontrolGSM SRL',
-    'eco-date': 'Jun 2025 &#8594; Present',
-    'eco-sub': 'Via Adecco Italia S.p.A. &nbsp;&middot;&nbsp; Role D2 &nbsp;&middot;&nbsp; Apprenticeship (approx. 2 years)',
-    'eco-body': '<ul><li>Frontend development using Vue 3 (SPA architecture, Ionic, TypeScript, Pinia, Vue Router, Vite)</li><li>Managing Git/GitHub repositories with branching strategies, pull requests, and parallel team workflows</li><li>Integration of frontend with backend services via REST APIs across separate repositories</li><li>Active participation in the company\'s ISO 27001 information security certification process</li><li>Daily use of NPM, Axios, VS Code, GitHub Copilot, WinSCP, Notepad++</li></ul>',
-    'rz-title': 'Video Editing Team Leader at RedZone Studio',
-    'rz-date': 'Sep 2021 &#8594; Dec 2022',
-    'rz-sub': 'E-sports &amp; clothing brand content production',
-    'rz-body': '<ul><li>Led the video editing team, producing montages, special effects and motion design presentations</li><li>Helped drive a significant increase in brand visibility</li></ul>',
-    'edu1-title': 'B.Sc. Computer Engineering (L-8), AI Curriculum',
-    'edu1-date': '2026 &#8594; Present',
-    'edu1-sub': 'Universit&agrave; degli Studi Guglielmo Marconi (UNIMARCONI) &middot; Online',
-    'edu2-title': 'Computer Science, Undergraduate (incomplete)',
-    'edu2-date': '2023 &#8594; 2026',
-    'edu2-sub': 'Universit&agrave; degli Studi del Molise (UNIMOL), transferred to UNIMARCONI to focus on AI',
-    'edu3-title': 'Technical Diploma (ITIS), IT and Telecommunications',
-    'edu3-date': 'Jun 2023',
-    'edu3-sub': 'I.T.I.S. Ettore Majorana &middot; Final grade: 95/100 &middot; EQF Level 4',
-    'edu3-body': 'Avg. grade yr. 4: 8.5/10 &nbsp;&middot;&nbsp; Avg. grade yr. 5: 9/10 &nbsp;&middot;&nbsp; PCTO: .NET School / Cisco, UniCredit Start-Up Your Life, Synergie (300h)<br>English intensive course at ESE - European School of English, Malta',
-    'alice-date': '2025 &#8594; Present',
-    'alice-sub': 'Modular personal AI assistant, 100% local, no cloud dependencies',
-    'alice-body': '<ul><li>FastAPI backend with an event-driven plugin architecture (20+ plugins: calendar, email via IMAP/SMTP, web search, notes, news, weather, file search, clipboard, media control, LAN diagnostics, whiteboard, CAD generator, chart generator, PC automation, home automation, MCP client, notifications, memory)</li><li>Electron + Vue 3 + TypeScript desktop frontend with real-time communication via WebSockets; state managed with Pinia</li><li>LLM inference via LM Studio or Ollama; STT via faster-Whisper; TTS via Piper (Italian voice); optional TRELLIS 3D neural generation microservice (Three.js viewer)</li><li>SQLite + SQLModel for persistence; Qdrant vector store for semantic memory; automated setup via PowerShell scripts</li></ul>',
-    'modex-date': '2025 &#8594; Present',
-    'modex-sub': 'Metadata-only mod library manager for Minecraft, 16 public releases on GitHub',
-    'modex-body': '<ul><li>Stores only CurseForge mod references instead of JAR files, keeping a library of 1000+ mods under 5 MB vs the typical 5-10 GB of traditional managers</li><li>In-app CurseForge browsing, one-click add to library, update checks, modpack import/export (CurseForge ZIP, Prism/MultiMC, native .modex, GitHub Gist sharing)</li><li>Interactive mod dependency graph with D3.js + PixiJS/WebGL rendering; statistics dashboard with Chart.js; modpack version history with restore</li><li>Instance sync with auto-detection of CurseForge, Prism and MultiMC launchers; built-in config editor; VitePress documentation site</li><li>Stack: Electron 30, Vue 3, TypeScript, Vite, Tailwind CSS, D3.js, PixiJS, Chart.js, LowDB</li></ul>',
-    'finanx-date': '2026 &#8594; Present',
-    'finanx-sub': 'Business tycoon simulation desktop application built with Electron + Vue 3',
-    'finanx-body': '<ul><li>Dual-pool financial architecture (cash + card) with a full banking system, tiered bank cards, transaction history, and an ATM terminal with deposit/withdrawal modes</li><li>Stock market with dividend payouts, crypto with proof-of-stake staking rewards, real estate with location grading, and a business ownership system with custom name and icon</li><li>Underground Market with reputation tiers and contacts; Storage Wars auction system with procedural location generation and dynamic lot events; online shop with buy/sell trading</li><li>Loan system with credit score mechanics, active events panel, stats view, and i18n support (English/Italian); Python scripts for balance simulation and progression tuning</li></ul>',
-    'lang1-name': 'Italian',
-    'lang1-lv': 'Native',
-    'lang2-name': 'English',
-    'lang2-lv': 'B2 cert., C1 listening',
-    'cert1': '<strong>Cambridge FCE</strong> - First Certificate in English, CEFR B2, Jun 2023',
-    'cert2': '<strong>Trinity College London</strong> - ESOL International, CEFR A2.2, May 2017',
-    'cert3': '<strong>Driving Licence</strong> - Category B',
-    'softskills': 'Self-taught and driven, strong problem-solving approach, comfortable managing multiple projects at the same time, effective team collaboration with Git workflows, always learning through personal projects, online courses, and staying current with the tech landscape'
-  },
+  en: {},
   it: {
     'title-tag': 'Apprendista Tecnico IT &nbsp;&middot;&nbsp; Sviluppatore Backend/Frontend &nbsp;&middot;&nbsp; Appassionato di AI',
-    'coming-soon': 'in arrivo',
     'sec-profile': 'Profilo',
     'sec-experience': 'Esperienza Professionale',
     'sec-education': 'Istruzione',
@@ -442,7 +417,11 @@ const T = {
   }
 };
 
-function setLang(lang) {
+document.querySelectorAll('[data-t]').forEach(function(el) {
+  T.en[el.getAttribute('data-t')] = el.innerHTML;
+});
+
+function setLang(lang, store) {
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-t]').forEach(function(el) {
     var key = el.getAttribute('data-t');
@@ -450,13 +429,20 @@ function setLang(lang) {
   });
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   document.getElementById('btn-it').classList.toggle('active', lang === 'it');
+  document.getElementById('btn-pdf').title = lang === 'it' ? 'Scarica PDF' : 'Download PDF';
+  if (store) try { localStorage.setItem('cv-lang', lang); } catch (e) {}
 }
-function setDark(on) {
+function setDark(on, store) {
   document.body.classList.toggle('dark', on);
   document.getElementById('btn-dark').classList.toggle('active', on);
   document.getElementById('btn-light').classList.toggle('active', !on);
+  if (store) try { localStorage.setItem('cv-dark', on ? '1' : '0'); } catch (e) {}
 }
-setLang('en');
+
+var savedLang = null;
+try { savedLang = localStorage.getItem('cv-lang'); } catch (e) {}
+setLang(savedLang || ((navigator.language || '').toLowerCase().indexOf('it') === 0 ? 'it' : 'en'));
+setDark(document.body.classList.contains('dark'));
 </script>
 </body>
 </html>

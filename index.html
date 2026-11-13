@@ -224,6 +224,37 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
 
         <div class="entry">
           <div class="entry-head">
+            <div class="entry-title"><a href="https://github.com/devfrx/coralyn" class="title-link" target="_blank" rel="noopener noreferrer">Coralyn</a></div>
+            <div class="entry-date" data-t="coralyn-date">2026 → Present</div>
+          </div>
+          <div class="entry-sub" data-t="coralyn-sub">Multi-tenant SaaS for beach establishments: umbrella map, bookings and seasonal subscriptions, payment tracking</div>
+          <div class="entry-body" data-t="coralyn-body">
+            <ul>
+              <li>NestJS + Prisma + PostgreSQL modular monolith; shared-schema multi-tenancy enforced with forced row-level security on 22 tables and fail-closed, permission-based authorization</li>
+              <li>Booking domain with daily, periodic and seasonal subscriptions (renewal, pre-emption, suspension, transfer); pricing engine with explicit precedence rules and server-side quotes</li>
+              <li>Three Vue 3 apps (staff, platform console, customer PWA) in a pnpm monorepo sharing a UI kit, a data layer and typed contracts; TanStack Query, Pinia, Tailwind CSS</li>
+              <li>67 ADRs; GitHub Actions CI with lint, typecheck, unit tests and API e2e tests against a real PostgreSQL; Docker Compose production stack behind Caddy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <div class="entry-title">Laplace</div>
+            <div class="entry-date" data-t="laplace-date">2026 → Present</div>
+          </div>
+          <div class="entry-sub" data-t="laplace-sub">Windows desktop workspace unifying AI chat, agentic coding, computer use and local generation, currently in design (private repo)</div>
+          <div class="entry-body" data-t="laplace-body">
+            <ul>
+              <li>Requirements and domain model written before any code: 427 user stories, 106 entities, 387 business rules, 28 state machines, 37 modules with acyclic dependencies</li>
+              <li>13 ADRs covering process isolation, storage and backup, sandboxing and trust boundaries, MSIX packaging; threat model and risk register maintained alongside</li>
+              <li>Chosen architecture: Rust core with separate session processes, Electron + React 19 + TypeScript UI, JSON-RPC over pipes with JSON Schema 2020-12 contracts, SQLite, MCP and ACP</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
             <div class="entry-title"><a href="https://github.com/devfrx/alice" class="title-link" target="_blank" rel="noopener noreferrer">AL\CE</a></div>
             <div class="entry-date" data-t="alice-date">2025 → Present</div>
           </div>
@@ -255,22 +286,6 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
           </div>
         </div>
 
-        <div class="entry">
-          <div class="entry-head">
-            <div class="entry-title"><a href="https://github.com/devfrx/finanx" class="title-link" target="_blank" rel="noopener noreferrer">Finanx</a></div>
-            <div class="entry-date" data-t="finanx-date">2026 → Present</div>
-          </div>
-          <div class="entry-sub" data-t="finanx-sub">Business tycoon simulation desktop application built with Electron + Vue 3</div>
-          <div class="entry-body" data-t="finanx-body">
-            <ul>
-              <li>Dual-pool financial architecture (cash + card) with a full banking system, tiered bank cards, transaction history, and an ATM terminal with deposit/withdrawal modes</li>
-              <li>Stock market with dividend payouts, crypto with proof-of-stake staking rewards, real estate with location grading, and a business ownership system with custom name and icon</li>
-              <li>Underground Market with reputation tiers and contacts; Storage Wars auction system with procedural location generation and dynamic lot events; online shop with buy/sell trading</li>
-              <li>Loan system with credit score mechanics, active events panel, stats view, and i18n support (English/Italian); Python scripts for balance simulation and progression tuning</li>
-            </ul>
-          </div>
-        </div>
-
       </div>
 
     </div>
@@ -294,6 +309,7 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
           <div class="skill-group-label" data-t="label-backend">Backend &amp; Architecture</div>
           <div class="tags">
             <span class="tag hi">Laravel</span><span class="tag hi">MVC</span>
+            <span class="tag">NestJS</span><span class="tag">Prisma</span><span class="tag">PostgreSQL</span>
             <span class="tag">PHP</span><span class="tag">REST API</span><span class="tag">SQL</span>
           </div>
         </div>
@@ -311,6 +327,7 @@ body.dark .dark-toggle button.active{background:var(--accent);color:var(--accent
           <div class="skill-group-label" data-t="label-langs">Languages</div>
           <div class="tags">
             <span class="tag hi">Python</span><span class="tag hi">JavaScript</span><span class="tag hi">TypeScript</span>
+            <span class="tag">Rust</span><span class="tag">C#</span>
             <span class="tag">Java (Swing)</span><span class="tag">C</span><span class="tag">PHP</span><span class="tag">XML / XSD</span>
           </div>
         </div>
@@ -378,7 +395,7 @@ const T = {
     'label-langs': 'Linguaggi',
     'label-tools': 'Strumenti e Piattaforme',
     'label-other': 'Altro',
-    'profile-text': 'Studio Ingegneria Informatica con specializzazione in Intelligenza Artificiale e lavoro come apprendista sviluppatore. Il mio interesse principale ruota attorno allo sviluppo software e all\'integrazione di modelli di IA nelle applicazioni, affiancato da una solida curiosità per la gestione di architetture di rete. Divido il mio tempo tra università, lavoro e progetti personali, che porto avanti sia per creare strumenti concreti sia per approfondire continuamente le mie competenze. Ho un approccio orientato alla comprensione profonda, quando mi imbatto in un nuovo linguaggio, framework, un modello o un problema logico nuovo, tendo ad analizzarlo fino in fondo cercando la soluzione piu efficiente, scalabile e professionale possibile che rientra tra le mie competenze (anche oltre se si presenta un\'occasione per imparare).',
+    'profile-text': 'Studio Ingegneria Informatica con specializzazione in Intelligenza Artificiale e lavoro come apprendista sviluppatore. Il mio interesse principale ruota attorno allo sviluppo software e all\'integrazione di modelli di IA nelle applicazioni, affiancato da una solida curiosità per la gestione di architetture di rete. Divido il mio tempo tra università, lavoro e progetti personali, che porto avanti sia per creare strumenti concreti sia per approfondire continuamente le mie competenze. Ho un approccio orientato alla comprensione profonda, quando mi imbatto in un nuovo linguaggio, framework, un modello o un problema logico nuovo, tendo ad analizzarlo fino in fondo cercando la soluzione più efficiente, scalabile e professionale possibile che rientra tra le mie competenze (anche oltre se si presenta un\'occasione per imparare).',
     'eco-title': 'Apprendista Tecnico IT presso EcocontrolGSM SRL',
     'eco-date': 'Giu 2025 &#8594; Presente',
     'eco-sub': 'Tramite Adecco Italia S.p.A. &nbsp;&middot;&nbsp; Ruolo D2 &nbsp;&middot;&nbsp; Apprendistato (circa 2 anni)',
@@ -397,15 +414,18 @@ const T = {
     'edu3-date': 'Giu 2023',
     'edu3-sub': 'I.T.I.S. Ettore Majorana &middot; Voto finale: 95/100 &middot; Livello EQF 4',
     'edu3-body': 'Media voti anno 4: 8.5/10 &nbsp;&middot;&nbsp; Media voti anno 5: 9/10 &nbsp;&middot;&nbsp; PCTO: .NET School / Cisco, UniCredit Start-Up Your Life, Synergie (300h)<br>Corso intensivo di inglese presso ESE - European School of English, Malta',
+    'coralyn-date': '2026 &#8594; Presente',
+    'coralyn-sub': 'SaaS multi-tenant per stabilimenti balneari: mappa ombrelloni, prenotazioni e abbonamenti stagionali, registrazione incassi',
+    'coralyn-body': '<ul><li>Monolite modulare NestJS + Prisma + PostgreSQL; multi-tenancy a schema condiviso con row-level security forzata su 22 tabelle e autorizzazione a permessi fail-closed</li><li>Dominio prenotazioni con giornaliere, periodiche e abbonamenti stagionali (rinnovo, prelazione, sospensione, cessione); pricing engine a precedenze esplicite e preventivi calcolati dal server</li><li>Tre app Vue 3 (staff, console di piattaforma, PWA cliente) in un monorepo pnpm che condividono UI kit, data layer e contratti tipizzati; TanStack Query, Pinia, Tailwind CSS</li><li>67 ADR; CI su GitHub Actions con lint, typecheck, unit test ed e2e dell\'API su un PostgreSQL reale; stack di produzione Docker Compose dietro Caddy</li></ul>',
+    'laplace-date': '2026 &#8594; Presente',
+    'laplace-sub': 'Workspace desktop per Windows che unifica chat AI, coding agentico, uso del computer e generazione locale, attualmente in progettazione (repo privato)',
+    'laplace-body': '<ul><li>Requisiti e modello di dominio scritti prima del codice: 427 user story, 106 entit&agrave;, 387 regole di business, 28 macchine a stati, 37 moduli con dipendenze acicliche</li><li>13 ADR su isolamento dei processi, archiviazione e backup, sandboxing e confini di fiducia, packaging MSIX; threat model e registro dei rischi mantenuti in parallelo</li><li>Architettura scelta: core in Rust con processi di sessione separati, interfaccia Electron + React 19 + TypeScript, JSON-RPC su pipe con contratti JSON Schema 2020-12, SQLite, MCP e ACP</li></ul>',
     'alice-date': '2025 &#8594; Presente',
     'alice-sub': 'Assistente AI personale modulare, 100% locale, senza dipendenze cloud',
     'alice-body': '<ul><li>Backend FastAPI con architettura a plugin event-driven (20+ plugin: calendario, email via IMAP/SMTP, ricerca web, note, notizie, meteo, ricerca file, clipboard, controllo media, diagnostica LAN, lavagna, generatore CAD, generatore grafici, automazione PC, domotica, client MCP, notifiche, memoria)</li><li>Frontend desktop con Electron + Vue 3 + TypeScript, comunicazione in tempo reale via WebSocket; stato gestito con Pinia</li><li>Inferenza LLM tramite LM Studio o Ollama; STT con faster-Whisper; TTS con Piper (voce italiana); microservizio opzionale TRELLIS per generazione 3D neurale (viewer Three.js)</li><li>SQLite + SQLModel per la persistenza; Qdrant vector store per la memoria semantica; setup automatizzato tramite script PowerShell</li></ul>',
     'modex-date': '2025 &#8594; Presente',
     'modex-sub': 'Gestore di mod per Minecraft solo-metadati, 16 release pubbliche su GitHub',
     'modex-body': '<ul><li>Salva solo i riferimenti CurseForge invece dei file JAR, mantenendo una libreria di 1000+ mod sotto i 5 MB rispetto ai tipici 5-10 GB dei manager tradizionali</li><li>Navigazione CurseForge integrata, aggiunta in un clic, controllo aggiornamenti, import/export modpack (CurseForge ZIP, Prism/MultiMC, formato nativo .modex, condivisione via GitHub Gist)</li><li>Grafo interattivo delle dipendenze dei mod con rendering D3.js + PixiJS/WebGL; dashboard statistiche con Chart.js; cronologia versioni modpack con ripristino</li><li>Sincronizzazione istanze con rilevamento automatico di CurseForge, Prism e MultiMC; editor di configurazione integrato; sito documentazione VitePress</li><li>Stack: Electron 30, Vue 3, TypeScript, Vite, Tailwind CSS, D3.js, PixiJS, Chart.js, LowDB</li></ul>',
-    'finanx-date': '2026 &#8594; Presente',
-    'finanx-sub': 'Applicazione desktop di simulazione business tycoon con Electron + Vue 3',
-    'finanx-body': '<ul><li>Architettura finanziaria a doppio pool (contanti + carta) con sistema bancario completo, carte a livelli, storico transazioni e terminale ATM con modalit&agrave; deposito/prelievo</li><li>Mercato azionario con distribuzione dividendi, crypto con staking proof-of-stake, immobiliare con grading per localit&agrave; e sistema di propriet&agrave; aziendale con nome e icona personalizzati</li><li>Mercato Underground con livelli reputazione e contatti; sistema aste Storage Wars con generazione procedurale delle localit&agrave; ed eventi dinamici; negozio online con trading compra/vendi</li><li>Sistema prestiti con meccanica credit score, pannello eventi attivi, vista statistiche e supporto i18n (inglese/italiano); script Python per simulazione e bilanciamento della progressione</li></ul>',
     'lang1-name': 'Italiano',
     'lang1-lv': 'Madrelingua',
     'lang2-name': 'Inglese',
